@@ -9,7 +9,6 @@ class Reloj
     public:
         Reloj();
         bool iniciar();
-        String obtenerFechaHora();
         String obtenerFecha(); 
         String obtenerHora();
     private:

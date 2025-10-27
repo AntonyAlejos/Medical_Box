@@ -43,12 +43,20 @@ uint8_t Menu::navegar(){
                     doc.tomarTemperatura();
                     break;
                 case 2:
+                    doc.tomarPulsoOxigeno();
                 
                 case 3:
-                    doc.enviar_Data();
+                    doc.terminarExamen();
                     break;;
                 case 4:
+                    doc.enviar_Data();
+                    break;
+                case 5:
                     doc.registrarPaciente();
+                    break;
+                case 6:
+                    //CASO REGISTRAR LIMITES
+                    doc.Configurar_Limites();
                     break;
                 default:
                     break;

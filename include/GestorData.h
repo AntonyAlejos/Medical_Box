@@ -7,9 +7,10 @@
 class GestorDatos{
     public:
         GestorDatos(SoftwareSerial& serialRef);
-        void enviarDatos(String ficha);
-        bool recibirDatos(String &nombre,String&apellido,int& id);
-
+        void enviarDatos(String datos);
+        bool recibirDatos(String &nombre,String&apellido,int& edad,char & sexo,String & domicilio,String& telefono,String& contacto_Emerg);
+        bool recibirLimites(float &,float &,float &,float &,float &,float &,float &,float &,float &,float &);
+        String leerLineaESP32();
         /*------------------------------------------------------------------        
                           ESTO SE RESULVE EN EL ESP32 
 
