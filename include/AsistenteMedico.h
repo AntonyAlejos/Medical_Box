@@ -17,8 +17,7 @@ class AsistenteMedico{
     void registrarPaciente();
     void Configurar_Limites();
     void tomarPulsoOxigeno();
-
-    
+    void ayuda();
 
 
     private:

@@ -58,6 +58,9 @@ uint8_t Menu::navegar(){
                     //CASO REGISTRAR LIMITES
                     doc.Configurar_Limites();
                     break;
+                case 7:
+                    doc.ayuda();
+                    break;
                 default:
                     break;
                 }                   

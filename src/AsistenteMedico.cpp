@@ -163,7 +163,6 @@ Serial.println(limPDiastolica.maxi);
 Serial.println(F("=============================="));
     
 }
-
 void AsistenteMedico::tomarPulsoOxigeno(){
     pantalla.clear();
     pantalla.mensaje(F("Colocar dedo"), 0, 0);
@@ -202,5 +201,16 @@ void AsistenteMedico::tomarPulsoOxigeno(){
     pantalla.clear();
     pantalla.mensaje(F("Medicion realizada"), 0, 0);
     while (!botones.pushOK()) {}
+    pantalla.clear();
+}
+
+void AsistenteMedico::ayuda(){
+    gestorDatos.enviarDatos("2");
+    pantalla.clear();
+    pantalla.mensaje(F("Tranquilo/a..."), 0, 0);
+    pantalla.mensaje(F("Ya pedimos ayuda."), 1, 0);
+    pantalla.mensaje(F("Respira hondo,"), 2, 0);
+    pantalla.mensaje(F("todo estara bien."), 3, 0);
+    while (!botones.pushOK()){}
     pantalla.clear();
 }

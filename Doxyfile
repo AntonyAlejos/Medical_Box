@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "ASISTENTE MEDICO PERSONAL"
+PROJECT_NAME           = "ASISTENTE MÉDICO"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -74,7 +74,7 @@ PROJECT_ICON           =
 # entered, it will be relative to the location where Doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = docs
+OUTPUT_DIRECTORY       =
 
 # If the CREATE_SUBDIRS tag is set to YES then Doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -534,7 +534,7 @@ TIMESTAMP              = NO
 # normally produced when WARNINGS is set to YES.
 # The default value is: NO.
 
-EXTRACT_ALL            = YES
+EXTRACT_ALL            = NO
 
 # If the EXTRACT_PRIVATE tag is set to YES, all private members of a class will
 # be included in the documentation.
@@ -991,7 +991,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = include src
+INPUT                  = ./src ./include
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -2615,7 +2615,7 @@ HIDE_UNDOC_RELATIONS   = YES
 # set to NO
 # The default value is: NO.
 
-HAVE_DOT               = NO
+HAVE_DOT               = YES
 
 # The DOT_NUM_THREADS specifies the number of dot invocations Doxygen is allowed
 # to run in parallel. When set to 0 Doxygen will base this on the number of
@@ -2985,3 +2985,65 @@ MSCGEN_TOOL            =
 # command).
 
 MSCFILE_DIRS           =
+
+
+
+# ==============================
+# Configuración básica
+# ==============================
+PROJECT_NAME           = "Asistente Médico"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+OPTIMIZE_OUTPUT_FOR_C  = YES
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = .
+INPUT                  = .
+FILE_PATTERNS          = *.ino *.h *.cpp
+EXCLUDE_PATTERNS       = */.git/* */build/* */.pio/*
+
+# ==============================
+# Archivos de salida
+# ==============================
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_TREEVIEW      = YES
+
+# ==============================
+# Opciones de gráficos y UML
+# ==============================
+HAVE_DOT               = YES
+DOT_PATH               = "C:/Program Files/Graphviz/bin"
+CLASS_DIAGRAMS         = YES
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+DOT_IMAGE_FORMAT       = png
+INTERACTIVE_SVG        = YES
+DOT_TRANSPARENT        = YES
+DOT_MULTI_TARGETS      = YES
+DOT_GRAPH_MAX_NODES    = 200
+
+# ==============================
+# Comentarios
+# ==============================
+JAVADOC_AUTOBRIEF      = YES
+MULTILINE_CPP_IS_BRIEF = YES
+TAB_SIZE               = 4
+
+# ==============================
+# Salida limpia
+# ==============================
+QUIET                  = NO
+WARN_IF_UNDOCUMENTED   = NO
+WARN_NO_PARAMDOC       = NO
